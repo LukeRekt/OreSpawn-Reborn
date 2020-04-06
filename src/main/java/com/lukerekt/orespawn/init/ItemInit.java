@@ -26,31 +26,44 @@ import net.minecraftforge.registries.ObjectHolder;;
 @ObjectHolder(OreSpawn.MOD_ID)
 public class ItemInit {
 	//@ObjectHolder(OreSpawn.MOD_ID + "teste_item")
-	public static final Item teste_item = null;
+	
+	//criacao
+	public static final Item ametista = null;
 	
 	//Ferramentas
+	
+	//ametista
 	public static final Item espada_ametista = null;
 	public static final Item picareta_ametista = null;
 	public static final Item pa_ametista = null;
 	public static final Item enxada_ametista = null;
 	
+	//ruby
+	public static final Item espada_ruby = null;
+	
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
-	event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("teste_item"));
+	event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("ametista"));
 	
 	
 	//Ferramentas
+	
+	//ametista
 		event.getRegistry().register(new SwordItem(ModItemTier.ESPADA_AMETISTA, 7, 5.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("espada_ametista"));
 		event.getRegistry().register(new PickaxeItem(ModItemTier.ESPADA_AMETISTA, 4, 5.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("picareta_ametista"));
 		event.getRegistry().register(new ShovelItem(ModItemTier.ESPADA_AMETISTA, 2, 5.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("pa_ametista"));
 		event.getRegistry().register(new AxeItem(ModItemTier.ESPADA_AMETISTA, 11, 5.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("machado_ametista"));
 		event.getRegistry().register(new HoeItem(ModItemTier.ESPADA_AMETISTA, 5.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("enxada_ametista"));
+		
+		//ruby
+	event.getRegistry().register(new SwordItem(ModItemTier.ESPADA_AMETISTA, 8, 5.0F, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("espada_ruby"));
+	
 	}
 	
 	public enum ModItemTier implements IItemTier{
 		ESPADA_AMETISTA(4, 1500, 15.0F, 7.0F, 250, () -> {
-			return Ingredient.fromItems(ItemInit.teste_item);
+			return Ingredient.fromItems(ItemInit.ametista);
 		});
 		
 		private final int harvestLevel;

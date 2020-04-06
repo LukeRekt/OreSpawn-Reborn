@@ -1,5 +1,5 @@
 {
-    "item.orespawn.teste_item": "Ametista",
+    "item.orespawn.ametista": "Ametista",
     
     "block.orespawn.example_block": "Minerio de Ametista",
     
@@ -13,5 +13,7 @@
     
     "item.orespawn.machado_ametista": "Machado de Ametista",
     
-    "item.orespawn.enxada_ametista": "Enxada de Ametista"
+    "item.orespawn.enxada_ametista": "Enxada de Ametista",
+    
+    "item.orespawn.espada_ruby": " Espada de Ruby"
 }
