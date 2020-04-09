@@ -17,19 +17,19 @@ import net.minecraftforge.registries.ObjectHolder;
 @Mod.EventBusSubscriber(modid = OreSpawn.MOD_ID, bus = Bus.MOD)
 public class BlockInit 
 {
-   public static final Block example_block = null;
+   public static final Block minerio_ametista = null;
 
    
    @SubscribeEvent
    public static void registerBlocks(final RegistryEvent.Register<Block> event) 
    {
-	   event.getRegistry().register(new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(0.7f, 15).sound(SoundType.STONE)).setRegistryName("example_block"));
+	   event.getRegistry().register(new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(0.7f, 15).sound(SoundType.STONE)).setRegistryName("minerio_ametista"));
 	   
    }
    
    @SubscribeEvent
    public static void registerBlockItems(final RegistryEvent.Register<Item> event) 
    {
-	   event.getRegistry().register(new BlockItem(example_block, new Item.Properties().maxStackSize(16)).setRegistryName("example_block"));
+	   event.getRegistry().register(new BlockItem(minerio_ametista, new Item.Properties().maxStackSize(16)).setRegistryName("minerio_ametista"));
    }
 }

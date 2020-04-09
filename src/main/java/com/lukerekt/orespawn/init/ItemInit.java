@@ -40,10 +40,13 @@ public class ItemInit {
 	
 	//ruby
 	public static final Item espada_ruby = null;
-	
+	public static final Item picareta_ruby = null;
+	public static final Item pa_ruby = null;
+	public static final Item enxada_ruby = null;
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
+    //misc
 	event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("ametista"));
 	
 	
@@ -58,7 +61,10 @@ public class ItemInit {
 		
 		//ruby
 	event.getRegistry().register(new SwordItem(ModItemTier.ESPADA_AMETISTA, 8, 5.0F, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("espada_ruby"));
-	
+	event.getRegistry().register(new PickaxeItem(ModItemTier.ESPADA_AMETISTA, 4, 5.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("picareta_ruby"));
+	event.getRegistry().register(new ShovelItem(ModItemTier.ESPADA_AMETISTA, 2, 5.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("pa_ruby"));
+	event.getRegistry().register(new AxeItem(ModItemTier.ESPADA_AMETISTA, 11, 5.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("machado_ruby"));
+	event.getRegistry().register(new HoeItem(ModItemTier.ESPADA_AMETISTA, 5.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("enxada_ruby"));
 	}
 	
 	public enum ModItemTier implements IItemTier{

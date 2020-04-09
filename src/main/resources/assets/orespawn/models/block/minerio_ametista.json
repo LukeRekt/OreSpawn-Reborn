@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "orespawn:blocks/example_block"
+        "all": "orespawn:blocks/minerio_ametista"
     }
 }
